@@ -10,6 +10,8 @@ public class TestListReferenceBased {
 		aList.add(2, "Onion");
 		aList.add(3, "Ramen");
 		
+		aList.displayList();//print out the list
+		
 		System.out.println("List size: " + aList.size());//test size()
 		
 		System.out.println("Getting item 1 from the list...");

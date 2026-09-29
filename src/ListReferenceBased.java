@@ -120,5 +120,16 @@ public class ListReferenceBased implements ListInterface
     numItems = 0;
   } // end removeAll
 
+  public void displayList() {
+	// prints out the list
+	Node curr = head;
+	while (curr!=null) {
+		System.out.println(curr.getItem());
+		curr=curr.getNext();
+	}
+	
+  }
+  
+  
 
 } // end ListReferenceBased
