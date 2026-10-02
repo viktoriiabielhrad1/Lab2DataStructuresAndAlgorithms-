@@ -9,6 +9,8 @@ public class TestListReferenceBased {
 		aList.add(1, "Mango");
 		aList.add(2, "Onion");
 		aList.add(3, "Ramen");
+		aList.add(3, "Potato");
+		System.out.println("Longest string object is " + aList.listLongest());//test longest string obj
 		
 		aList.displayList();//print out the list
 		
@@ -25,6 +27,9 @@ public class TestListReferenceBased {
 		System.out.println("Clear the list");
 		aList.removeAll();
 		System.out.println("Is the list empty? " + aList.isEmpty());//test if the list is clear
+		
+
+		System.out.println("Longest string object is " + aList.listLongest());
 	}
 
 }

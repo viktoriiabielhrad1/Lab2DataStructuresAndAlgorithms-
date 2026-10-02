@@ -122,14 +122,28 @@ public class ListReferenceBased implements ListInterface
 
   public void displayList() {
 	// prints out the list
-	Node curr = head;
-	while (curr!=null) {
-		System.out.println(curr.getItem());
-		curr=curr.getNext();
-	}
+	  for (Node curr = head; curr != null; curr = curr.getNext()){
+	  System.out.println(curr.getItem());
+	  }
+	//public String listLongest() {
+	//	return;
+	//}
 	
   }
   
-  
+  public String listLongest() {
+	  if (head == null) return null;//to avoid nuulpointerexception
+	  Node curr = head;//start at the first node in the linked list
+	  String longestObj = (String) curr.getItem();  //take the first item as the current longest string
+
+	  for (Node c = head; c != null; c = c.getNext()){ //loop through every node in the list
+		  //System.out.println(curr.getItem());
+		  String longest =(String) c.getItem(); //get the string stored in the current node
+		  if(longest.length() >  longestObj.length()) { //if this string is longer, update it and return the longest
+			  longestObj = longest;
+		  }
+		  }
+	  return longestObj;
+  }
 
 } // end ListReferenceBased
